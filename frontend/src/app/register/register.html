@@ -1,0 +1,276 @@
+  <!-- Background layers -->
+  <div class="bg-grid"></div>
+  <div class="scanlines"></div>
+  <div class="orb orb-purple"></div>
+  <div class="orb orb-blue"></div>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar">
+    <a routerLink="/" class="nav-logo">
+      <div class="nav-logo-icon">🥽</div>
+      <span class="nav-logo-text">iXR<span>Lab</span></span>
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/">Home</a>
+      <a href="#" class="active">Participants</a>
+      <a href="#">Schedule</a>
+      <a href="#">Experiments</a>
+      <a href="#">Logs</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="nav-user">
+        <span class="badge badge-purple">Researcher</span>
+        <div class="nav-avatar">JS</div>
+        <span class="nav-username">J. Smith</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="app-shell">
+
+    <!-- ======== SIDEBAR ======== -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section-label">Navigation</div>
+      <a routerLink="/" class="sidebar-item">
+        <span class="si-icon">🏠</span> Dashboard
+      </a>
+      <a routerLink="/register" class="sidebar-item active">
+        <span class="si-icon">👥</span> Participants
+      </a>
+      <a href="#" class="sidebar-item">
+        <span class="si-icon">📅</span> Schedule
+      </a>
+      <a href="#" class="sidebar-item">
+        <span class="si-icon">🔬</span> Experiments
+      </a>
+
+      <div class="sidebar-section-label">System</div>
+      <a href="#" class="sidebar-item">
+        <span class="si-icon">📋</span> Activity Logs
+      </a>
+      <a href="#" class="sidebar-item">
+        <span class="si-icon">🔍</span> API Lookup
+      </a>
+      <a href="#" class="sidebar-item">
+        <span class="si-icon">⚙️</span> Settings
+      </a>
+      <a routerLink="/login" class="sidebar-item">
+        <span class="si-icon">🚪</span> Sign Out
+      </a>
+
+    </aside>
+
+    <!-- ======== MAIN CONTENT ======== -->
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb anim-fade-up">
+        <a routerLink="/">Dashboard</a>
+        <span class="sep">›</span>
+        <a href="#">Participants</a>
+        <span class="sep">›</span>
+        <span class="current">Register New Participant</span>
+      </nav>
+
+      <!-- Page header -->
+      <div class="page-header anim-fade-up anim-delay-1">
+        <h1>Register New Participant</h1>
+        <p>Add a participant to the lab registry. All fields marked <span style="color:var(--accent);">*</span> are required.</p>
+      </div>
+
+      <!-- Step progress -->
+      <div class="step-progress anim-fade-up anim-delay-2">
+
+        <div class="step-item">
+          <div class="step-circle done">✓</div>
+          <span class="step-label done">Eligibility</span>
+        </div>
+        <div class="step-connector done"></div>
+
+        <div class="step-item">
+          <div class="step-circle active">2</div>
+          <span class="step-label active">Personal Info</span>
+        </div>
+        <div class="step-connector"></div>
+
+        <div class="step-item">
+          <div class="step-circle">3</div>
+          <span class="step-label">Consent</span>
+        </div>
+        <div class="step-connector"></div>
+
+        <div class="step-item">
+          <div class="step-circle">4</div>
+          <span class="step-label">Confirm</span>
+        </div>
+
+      </div>
+
+      <!-- ======== FORM ======== -->
+      <form action="#" method="POST" novalidate>
+
+        <!-- Personal information card -->
+        <div class="register-form-card anim-fade-up anim-delay-3">
+
+          <div class="form-section-title">Personal Information</div>
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label class="form-label" for="first-name">
+                First Name <span class="req">*</span>
+              </label>
+              <input class="form-input" type="text" id="first-name" name="firstName"
+                placeholder="e.g. Jordan" required autocomplete="given-name" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="last-name">
+                Last Name <span class="req">*</span>
+              </label>
+              <input class="form-input" type="text" id="last-name" name="lastName"
+                placeholder="e.g. Rivera" required autocomplete="family-name" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Email Address <span class="req">*</span>
+              </label>
+              <input class="form-input" type="email" id="email" name="email"
+                placeholder="participant@university.edu" required autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="dob">
+                Date of Birth <span class="req">*</span>
+              </label>
+              <input class="form-input" type="date" id="dob" name="dateOfBirth" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="student-id">Student / Staff ID</label>
+              <input class="form-input" type="text" id="student-id" name="studentId"
+                placeholder="e.g. U-204891" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="department">Department</label>
+              <select class="form-select form-input" id="department" name="department">
+                <option value="" disabled selected>Select department…</option>
+                <option>Computer Science</option>
+                <option>Psychology</option>
+                <option>Kinesiology</option>
+                <option>Cognitive Science</option>
+                <option>Human Factors</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone (optional)</label>
+              <input class="form-input" type="tel" id="phone" name="phone"
+                placeholder="+1 (555) 000-0000" autocomplete="tel" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="pronouns">Pronouns (optional)</label>
+              <select class="form-select form-input" id="pronouns" name="pronouns">
+                <option value="" disabled selected>Select…</option>
+                <option>He / Him</option>
+                <option>She / Her</option>
+                <option>They / Them</option>
+                <option>Prefer not to say</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Role card -->
+        <div class="register-form-card anim-fade-up anim-delay-3">
+          <div class="form-section-title">Participant Role</div>
+          <div class="role-selector">
+
+            <div>
+              <input class="role-option" type="radio" name="role" id="role-participant" value="participant" checked />
+              <label for="role-participant">
+                <span class="role-icon">🧑‍🔬</span>
+                <span class="role-name">Participant</span>
+                <span class="role-desc">Takes part in experiments only</span>
+              </label>
+            </div>
+
+            <div>
+              <input class="role-option" type="radio" name="role" id="role-researcher" value="researcher" />
+              <label for="role-researcher">
+                <span class="role-icon">👩‍💻</span>
+                <span class="role-name">Researcher</span>
+                <span class="role-desc">Can schedule &amp; log sessions</span>
+              </label>
+            </div>
+
+            <div>
+              <input class="role-option" type="radio" name="role" id="role-admin" value="admin" />
+              <label for="role-admin">
+                <span class="role-icon">🛡️</span>
+                <span class="role-name">Admin</span>
+                <span class="role-desc">Full system access</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Consent card -->
+        <div class="register-form-card anim-fade-up anim-delay-4">
+          <div class="form-section-title">Informed Consent</div>
+          <div class="consent-box">
+            <input type="checkbox" id="consent" name="consentSigned" required />
+            <p class="consent-text">
+              I confirm that this participant has read and signed the
+              <strong>IRB-approved informed consent form</strong> and voluntarily
+              agrees to participate in XR research sessions conducted by the iXR Lab.
+              The original signed consent document has been retained per
+              <a href="#">lab protocol</a> and is on file.
+            </p>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions anim-fade-up anim-delay-5">
+          <a href="#" class="btn btn-ghost">← Back</a>
+          <div class="form-actions-right">
+            <a routerLink="/" class="btn btn-ghost">Cancel</a>
+            <button type="submit" class="btn btn-primary">
+              Continue to Consent →
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+    </main>
+  </div>
+
+  <script>
+    // Highlight active input
+    document.querySelectorAll('.form-input').forEach(input => {
+      input.addEventListener('focus', () => input.style.borderColor = 'var(--purple-bright)');
+      input.addEventListener('blur',  () => input.style.borderColor = '');
+    });
+
+    // Consent gate — disable submit until checked
+    const consentBox = document.getElementById('consent');
+    const submitBtn  = document.querySelector('button[type="submit"]');
+
+    function updateSubmit() {
+      submitBtn.disabled = !consentBox.checked;
+      submitBtn.style.opacity = consentBox.checked ? '1' : '0.45';
+      submitBtn.style.cursor  = consentBox.checked ? 'pointer' : 'not-allowed';
+    }
+    consentBox.addEventListener('change', updateSubmit);
+    updateSubmit();
+  </script>

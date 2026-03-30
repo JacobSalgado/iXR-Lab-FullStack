@@ -1,0 +1,238 @@
+  <!-- Background layers -->
+  <div class="bg-grid"></div>
+  <div class="scanlines"></div>
+  <div class="orb orb-purple"></div>
+  <div class="orb orb-blue"></div>
+  <div class="orb orb-mid"></div>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar">
+    <a routerLink="/" class="nav-logo">
+      <div class="nav-logo-icon">🥽</div>
+      <span class="nav-logo-text">iXR<span>Lab</span></span>
+    </a>
+
+    <div class="nav-links">
+      <a routerLink="/" class="active">Home</a>
+      <a href="#">Participants</a>
+      <a href="#">Schedule</a>
+      <a href="#">Experiments</a>
+      <a href="#">Logs</a>
+    </div>
+
+    <div class="nav-actions">
+      <a routerLink="/login" class="btn btn-ghost">Sign In</a>
+      <a routerLink="/register" class="btn btn-primary">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero page-content">
+
+    <!-- Left: Text -->
+    <div class="hero-content">
+
+      <div class="hero-eyebrow anim-fade-up">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">XR Research Platform</span>
+      </div>
+
+      <h1 class="hero-title anim-fade-up anim-delay-1">
+        <span class="line-1">Manage Your Lab.</span>
+        <span class="line-2">Accelerate Research.</span>
+      </h1>
+
+      <p class="hero-desc anim-fade-up anim-delay-2">
+        A centralized dashboard for VR, AR, and Mixed Reality research labs.
+        Schedule experiments, manage participants, and log every session —
+        all in one secure, purpose-built platform.
+      </p>
+
+      <div class="hero-cta anim-fade-up anim-delay-3">
+        <a routerLink="/login" class="btn btn-primary btn-lg">Open Dashboard →</a>
+        <a href="#features" class="btn btn-ghost btn-lg">Learn More</a>
+      </div>
+
+      <div class="hero-stats anim-fade-up anim-delay-4">
+        <div class="stat-item">
+          <div class="stat-num">1,<span>240</span></div>
+          <div class="stat-label">Sessions Logged</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span>87</span></div>
+          <div class="stat-label">Participants</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num"><span>12</span></div>
+          <div class="stat-label">Active Studies</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="hero-visual">
+      <div class="headset-ring ring-1"></div>
+      <div class="headset-ring ring-2"></div>
+      <div class="headset-ring ring-3"></div>
+      <div class="headset-core">
+        <div class="headset-lens">
+          <div class="lens"><div class="lens-inner"></div></div>
+          <div class="lens"><div class="lens-inner"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard preview floating card -->
+    <div class="dash-preview anim-fade-up anim-delay-5">
+      <div class="dash-preview-bar">
+        <div class="window-dot dot-r"></div>
+        <div class="window-dot dot-y"></div>
+        <div class="window-dot dot-g"></div>
+        <span class="url">ixr-lab.local/dashboard</span>
+      </div>
+      <div class="dash-preview-body">
+        <div class="preview-metric-row">
+          <div class="preview-metric">
+            <div class="pm-val">14</div>
+            <div class="pm-label">Today</div>
+          </div>
+          <div class="preview-metric">
+            <div class="pm-val">87</div>
+            <div class="pm-label">Participants</div>
+          </div>
+          <div class="preview-metric">
+            <div class="pm-val">3</div>
+            <div class="pm-label">Active</div>
+          </div>
+        </div>
+        <div class="preview-session-list">
+          <div class="preview-session-hdr">Upcoming Sessions</div>
+          <div class="preview-session">
+            <div class="session-dot" style="background:#8b5cf6;"></div>
+            <div class="session-name">VR Spatial Cognition — P042</div>
+            <div class="session-time">09:30</div>
+          </div>
+          <div class="preview-session">
+            <div class="session-dot" style="background:#3b82f6;"></div>
+            <div class="session-name">AR Wayfinding — P055</div>
+            <div class="session-time">11:00</div>
+          </div>
+          <div class="preview-session">
+            <div class="session-dot" style="background:#22d3ee;"></div>
+            <div class="session-name">MR Collaboration — P067</div>
+            <div class="session-time">14:15</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======== FEATURES ======== -->
+  <section class="features-section" id="features">
+
+    <div class="section-header anim-fade-up">
+      <div class="badge badge-purple" style="margin: 0 auto 16px;">
+        <span>●</span> Platform Features
+      </div>
+      <h2 class="section-title">Everything your lab needs</h2>
+      <p class="section-subtitle">
+        Built specifically for XR research workflows. No adapting spreadsheets —
+        purpose-built tools for how your lab actually operates.
+      </p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card anim-fade-up anim-delay-1">
+        <div class="feature-icon">🔐</div>
+        <div class="feature-title">Secure Authentication</div>
+        <p class="feature-desc">
+          JWT-based login with bcrypt password hashing. Role-based access for
+          Admins, Researchers, and Viewers — each with tailored permissions.
+        </p>
+      </div>
+
+      <div class="feature-card anim-fade-up anim-delay-2">
+        <div class="feature-icon">👥</div>
+        <div class="feature-title">Participant Registry</div>
+        <p class="feature-desc">
+          Register, search, and track all experiment participants. Consent
+          tracking, experiment history, and soft-delete for full audit compliance.
+        </p>
+      </div>
+
+      <div class="feature-card anim-fade-up anim-delay-3">
+        <div class="feature-icon">📅</div>
+        <div class="feature-title">Smart Scheduling</div>
+        <p class="feature-desc">
+          Conflict-free experiment booking with real-time availability.
+          Automatic email confirmations and equipment reservation in one step.
+        </p>
+      </div>
+
+      <div class="feature-card anim-fade-up anim-delay-4">
+        <div class="feature-icon">🔬</div>
+        <div class="feature-title">API Lookup</div>
+        <p class="feature-desc">
+          Fetch published research from PubMed and OpenAlex. Attach papers
+          directly to experiments for seamless literature tracking.
+        </p>
+      </div>
+
+      <div class="feature-card anim-fade-up anim-delay-5">
+        <div class="feature-icon">📋</div>
+        <div class="feature-title">Activity Logging</div>
+        <p class="feature-desc">
+          Append-only audit log for every action in the system. Know who
+          accessed what, when — exportable for compliance reports.
+        </p>
+      </div>
+
+      <div class="feature-card anim-fade-up anim-delay-5">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Lab Security</div>
+        <p class="feature-desc">
+          VLAN isolation, UFW firewall, TLS encryption, and rate-limited
+          endpoints. Research data stays in your infrastructure, not the cloud.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== TECH STACK ======== -->
+  <section class="stack-section">
+    <div class="section-header anim-fade-up">
+      <h2 class="section-title">Built with a modern stack</h2>
+      <p class="section-subtitle">
+        Open-source technologies, self-hosted on your institution's infrastructure.
+      </p>
+    </div>
+    <div class="stack-grid">
+      <span class="stack-pill">Angular</span>
+      <span class="stack-pill">Node.js</span>
+      <span class="stack-pill">Express</span>
+      <span class="stack-pill">MongoDB</span>
+      <span class="stack-pill">Mongoose</span>
+      <span class="stack-pill">JWT Auth</span>
+      <span class="stack-pill">Nginx</span>
+      <span class="stack-pill">Ubuntu VM</span>
+      <span class="stack-pill">UFW Firewall</span>
+      <span class="stack-pill">VLAN Networking</span>
+      <span class="stack-pill">REST API</span>
+      <span class="stack-pill">Nodemailer</span>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="footer-copy">
+      © 2025 iXR Lab Manager &nbsp;·&nbsp; IT 340 System Administration &nbsp;·&nbsp; For Academic Use
+    </div>
+    <div class="footer-links">
+      <a href="#">Documentation</a>
+      <a href="#">GitHub</a>
+      <a routerLink="/login">Sign In</a>
+    </div>
+  </footer>
